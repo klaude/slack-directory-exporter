@@ -1,0 +1,25 @@
+{
+  "name": "slack-directory-exporter",
+  "version": "0.0.1-alpha1",
+  "description": "Export a Slack directory to various formats",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "directory",
+    "contacts"
+  ],
+  "author": "Kevin Laude <nerfyoda@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "slack-node": "^0.1.8",
+    "vcards-js": "^2.4.1"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
