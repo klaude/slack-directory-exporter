@@ -1,6 +1,9 @@
+const fs = require('fs')
+const rmdir = require('rimraf')
 const util = require('./src/util')
 const args = require('./src/args')
 const slack = require('./src/slack')
+const save = require('./src/save')
 
 // Process CLI arguments into the application config
 var config = {}
@@ -33,8 +36,18 @@ Promise.all([slack.getTeam(config), slack.getUsers(config)])
     Promise.all(slack.buildUsers(team, users))
       .then(users => {
         // Export the users to disk.
-        console.log('done')
+        //
+        // Re-initialize the export directory
+        if (fs.existsSync(config.save_path)) {
+          rmdir.sync(config.save_path, {}, util.throwError)
+        }
+
+        fs.mkdir(config.save_path, util.throwError)
+
+        save.toVCard(config, users, util.throwError)
+        save.toCsv(config, users, util.throwError)
       })
+      .then(() => { console.log('Done') })
       .catch(e => { console.error(e) })
   })
   .catch(e => { console.error(e) })

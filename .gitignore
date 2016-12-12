@@ -17,3 +17,6 @@ node_modules
 
 # Output of 'npm pack'
 *.tgz
+
+# The default saved constacts path
+export

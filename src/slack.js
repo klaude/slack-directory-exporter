@@ -2,10 +2,7 @@
  * Slack-facing methods
  */
 
-// Slack API connector
 const Slack = require('slack-node')
-
-// An HTTPS client to retrieve user photos
 const https = require('https')
 
 /**

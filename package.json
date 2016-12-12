@@ -15,7 +15,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "csv.js": "^1.0.2",
     "minimist": "^1.2.0",
+    "rimraf": "^2.5.4",
     "slack-node": "^0.1.8",
     "vcards-js": "^2.4.1"
   },
