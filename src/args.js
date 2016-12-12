@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Argument parsing helpers on top of the minimist library.
  *

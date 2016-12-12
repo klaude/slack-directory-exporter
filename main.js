@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs')
 const rmdir = require('rimraf')
 const util = require('./src/util')

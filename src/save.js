@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Contact export helpers.
  */
